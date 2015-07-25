@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-static-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -15,18 +15,22 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %> </li>
         <li><%= link_to "About", about_path %> </li>
+      <% if user_signed_in?%>
         <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Settings <span class="caret"></span>
+      Profile Settings <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
         <li><a href="#">Genereal</a></li>
         <li><a href="#">User</a></li>
         <li><a href="#">privacy</a></li>
         <li role="separator" class="divider"></li>
-        <li><a href="#">Sign out</a></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li> 
     </ul>
   </li>
+  <% else %>
+  <li><%= link_to "Log in", new_user_session_path %></li>
+     <%end%>
 </ul>
       </ul>
     </div><!-- /.navbar-collapse -->
