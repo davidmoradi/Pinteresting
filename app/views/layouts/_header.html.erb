@@ -18,10 +18,10 @@
       <% if user_signed_in?%>
         <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Profile Settings <span class="caret"></span>
+      Profile<span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
-        <li><a href="#">Genereal</a></li>
+        <li><%= link_to "Account settings", edit_user_registration_path%></li>
         <li><a href="#">User</a></li>
         <li><a href="#">privacy</a></li>
         <li role="separator" class="divider"></li>
