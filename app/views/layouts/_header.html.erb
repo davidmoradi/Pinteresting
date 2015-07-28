@@ -36,7 +36,10 @@
     </ul>
   </li>
   <% else %>
-  <li><%= link_to "Log in", new_user_session_path %></li>
+  <li><%= link_to new_user_session_path do %>
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Log in
+  <%end%>
+  </li>
      <%end%>
 </ul>
       </ul>
