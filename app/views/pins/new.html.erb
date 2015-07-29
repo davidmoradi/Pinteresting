@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 <br />
-<%= link_to 'Back', pins_path %>
+<%= link_to pins_path do %>
+<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+<%end%>

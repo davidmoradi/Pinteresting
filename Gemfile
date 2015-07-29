@@ -15,7 +15,8 @@ gem 'devise', '~> 3.5.1'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails', '~> 0.2.4'
-
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
