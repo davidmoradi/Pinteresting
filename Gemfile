@@ -11,6 +11,7 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 gem 'devise', '~> 3.5.1'
 gem 'omniauth-facebook'
 gem "koala", "~> 2.0"
