@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :pins
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root "pins#index"
   get "about" => "pages#about"
+
+  devise_scope :user do
+  delete 'sign_out', :to => 'devise/sessions#destroy'
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
