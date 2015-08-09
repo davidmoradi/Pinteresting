@@ -25,5 +25,8 @@ module Pinteresting
 
     # Required for heroku
     config.assets.initialize_on_precompile = false
+
+    #As apps created after f8 2014 cannot use the v1.0 API, we specify version for global use
+    Koala.config.api_version = 'v2.0'
   end
 end
